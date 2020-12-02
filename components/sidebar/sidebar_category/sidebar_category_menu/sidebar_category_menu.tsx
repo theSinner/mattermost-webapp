@@ -19,6 +19,7 @@ type Props = {
     category: ChannelCategory;
     isMenuOpen: boolean;
     onToggleMenu: (open: boolean) => void;
+    handleOpenDirectMessagesModal: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     intl: IntlShape;
     actions: {
         openModal: (modalData: {modalId: string; dialogType: any; dialogProps?: any}) => Promise<{
@@ -126,6 +127,14 @@ class SidebarCategoryMenu extends React.PureComponent<Props, State> {
                 />
             );
         }
+        const createDirectMessage = (
+            <Menu.ItemAction
+                id={'browseDirectMessages'}
+                onClick={this.props.handleOpenDirectMessagesModal}
+                icon={<i className='icon-account-plus-outline'/>}
+                text={intl.formatMessage({id: 'sidebar.createDirectMessageTitle', defaultMessage: 'Create Direct Message'})}
+            />
+        );
 
         return (
             <React.Fragment>
@@ -133,6 +142,7 @@ class SidebarCategoryMenu extends React.PureComponent<Props, State> {
                     {muteUnmuteCategory}
                     {renameCategory}
                     {deleteCategory}
+                    {createDirectMessage}
                 </Menu.Group>
                 <Menu.Group>
                     <Menu.ItemAction

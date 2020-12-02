@@ -26,6 +26,7 @@ describe('components/sidebar/sidebar_category/sidebar_category_menu', () => {
         isMuted: false,
         isMenuOpen: false,
         onToggleMenu: jest.fn(),
+        handleOpenDirectMessagesModal: jest.fn(),
         actions: {
             openModal: jest.fn(),
             setCategoryMuted: jest.fn(),

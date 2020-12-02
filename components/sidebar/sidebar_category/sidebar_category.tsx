@@ -252,6 +252,7 @@ export default class SidebarCategory extends React.PureComponent<Props, State> {
             categoryMenu = (
                 <SidebarCategoryMenu
                     category={category}
+                    handleOpenDirectMessagesModal={this.handleOpenDirectMessagesModal}
                     isMenuOpen={this.state.isMenuOpen}
                     onToggleMenu={this.handleMenuToggle}
                 />

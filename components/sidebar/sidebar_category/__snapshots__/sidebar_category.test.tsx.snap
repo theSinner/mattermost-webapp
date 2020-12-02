@@ -204,6 +204,7 @@ exports[`components/sidebar/sidebar_category should match snapshot when isNewCat
           "user_id": "",
         }
       }
+      handleOpenDirectMessagesModal={[Function]}
       isMenuOpen={false}
       onToggleMenu={[Function]}
     />

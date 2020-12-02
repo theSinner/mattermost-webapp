@@ -3763,6 +3763,7 @@
   "sidebar.browseChannelDirectChannel": "Browse channels and direct messages",
   "sidebar.createChannel": "Create a public channel",
   "sidebar.createDirectMessage": "Write a direct message",
+  "sidebar.createDirectMessageTitle": "Create Direct Message",
   "sidebar.createGroup": "Create a private channel",
   "sidebar.createPublicPrivateChannel": "Create a public or private channel",
   "sidebar.directchannel.you": "{displayname} (you)",
