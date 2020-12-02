@@ -102,3 +102,53 @@ exports[`components/sidebar/sidebar_category/sidebar_category_menu should match 
   </Connect(SidebarMenu)>
 </Fragment>
 `;
+
+exports[`components/sidebar/sidebar_category/sidebar_category_menu should match snapshot when unread filter is enabled 1`] = `
+<Fragment>
+  <Connect(SidebarMenu)
+    ariaLabel="Category Menu"
+    buttonAriaLabel="Category Menu"
+    id="SidebarCategoryMenu-category1"
+    isMenuOpen={false}
+    onToggleMenu={[Function]}
+    tooltipText="Category options"
+  >
+    <MenuGroup>
+      <MenuItemAction
+        icon={
+          <i
+            className="icon-bell-outline"
+          />
+        }
+        id="mute-category1"
+        onClick={[Function]}
+        show={true}
+        text="Mute Category"
+      />
+      <MenuItemAction
+        icon={
+          <i
+            className="icon-pencil-outline"
+          />
+        }
+        id="rename-category1"
+        onClick={[Function]}
+        show={true}
+        text="Rename Category"
+      />
+      <MenuItemAction
+        icon={
+          <i
+            className="icon-trash-can-outline"
+          />
+        }
+        id="delete-category1"
+        isDangerous={true}
+        onClick={[Function]}
+        show={true}
+        text="Delete Category"
+      />
+    </MenuGroup>
+  </Connect(SidebarMenu)>
+</Fragment>
+`;

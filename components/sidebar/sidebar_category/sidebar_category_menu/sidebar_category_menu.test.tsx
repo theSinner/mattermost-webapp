@@ -25,6 +25,7 @@ describe('components/sidebar/sidebar_category/sidebar_category_menu', () => {
         currentTeamId: 'team1',
         isMuted: false,
         isMenuOpen: false,
+        unreadFilterEnabled: false,
         onToggleMenu: jest.fn(),
         actions: {
             openModal: jest.fn(),
@@ -59,6 +60,23 @@ describe('components/sidebar/sidebar_category/sidebar_category_menu', () => {
 
         expect(wrapper.find('#rename-category1')).toHaveLength(0);
         expect(wrapper.find('#delete-category1')).toHaveLength(0);
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    test('should match snapshot when unread filter is enabled', () => {
+        const props = {
+            ...baseProps,
+            unreadFilterEnabled: true,
+        };
+
+        const wrapper = shallowWithIntl(
+            <SidebarCategoryMenu {...props}/>,
+        );
+
+        expect(wrapper.find('#rename-category1')).toHaveLength(1);
+        expect(wrapper.find('#delete-category1')).toHaveLength(1);
+        expect(wrapper.find('#create-category1')).toHaveLength(0);
 
         expect(wrapper).toMatchSnapshot();
     });

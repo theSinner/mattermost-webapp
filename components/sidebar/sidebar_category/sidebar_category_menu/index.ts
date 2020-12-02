@@ -9,7 +9,10 @@ import {getCurrentTeam} from 'mattermost-redux/selectors/entities/teams';
 import {ActionFunc} from 'mattermost-redux/types/actions';
 import {GlobalState} from 'mattermost-redux/types/store';
 
+import {GlobalState as WebappGlobalState} from 'types/store';
+
 import {openModal} from 'actions/views/modals';
+import {isUnreadFilterEnabled} from 'selectors/views/channel_sidebar';
 
 import SidebarCategoryMenu from './sidebar_category_menu';
 
@@ -17,8 +20,11 @@ function makeMapStateToProps() {
     return (state: GlobalState) => {
         const currentTeam = getCurrentTeam(state);
 
+        // type casting until we merge webapp and redux state together
+        const unreadFilterEnabled = isUnreadFilterEnabled(state as WebappGlobalState);
         return {
             currentTeamId: currentTeam.id,
+            unreadFilterEnabled,
         };
     };
 }

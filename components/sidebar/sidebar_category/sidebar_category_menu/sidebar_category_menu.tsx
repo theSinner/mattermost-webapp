@@ -16,6 +16,7 @@ import {ModalIdentifiers} from 'utils/constants';
 
 type Props = {
     currentTeamId: string;
+    unreadFilterEnabled: boolean;
     category: ChannelCategory;
     isMenuOpen: boolean;
     onToggleMenu: (open: boolean) => void;
@@ -127,13 +128,9 @@ class SidebarCategoryMenu extends React.PureComponent<Props, State> {
             );
         }
 
-        return (
-            <React.Fragment>
-                <Menu.Group>
-                    {muteUnmuteCategory}
-                    {renameCategory}
-                    {deleteCategory}
-                </Menu.Group>
+        let createCategory;
+        if (!this.props.unreadFilterEnabled) {
+            createCategory = (
                 <Menu.Group>
                     <Menu.ItemAction
                         id={`create-${category.id}`}
@@ -141,7 +138,17 @@ class SidebarCategoryMenu extends React.PureComponent<Props, State> {
                         icon={<i className='icon-folder-plus-outline'/>}
                         text={intl.formatMessage({id: 'sidebar_left.sidebar_category_menu.createCategory', defaultMessage: 'Create New Category'})}
                     />
+                </Menu.Group>);
+        }
+
+        return (
+            <React.Fragment>
+                <Menu.Group>
+                    {muteUnmuteCategory}
+                    {renameCategory}
+                    {deleteCategory}
                 </Menu.Group>
+                {createCategory}
             </React.Fragment>
         );
     }
