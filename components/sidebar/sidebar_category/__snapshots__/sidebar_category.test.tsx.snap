@@ -48,6 +48,7 @@ exports[`components/sidebar/sidebar_category should match snapshot 2`] = `
           "user_id": "",
         }
       }
+      handleOpenDirectMessagesModal={[Function]}
       isMenuOpen={false}
       onToggleMenu={[Function]}
     />
@@ -123,6 +124,7 @@ exports[`components/sidebar/sidebar_category should match snapshot when collapse
           "user_id": "",
         }
       }
+      handleOpenDirectMessagesModal={[Function]}
       isMenuOpen={false}
       onToggleMenu={[Function]}
     />
