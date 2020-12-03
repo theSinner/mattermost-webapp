@@ -138,6 +138,7 @@ exports[`components/SearchResultsItem should match snapshot for DM 1`] = `
         </div>
         <div
           className="search-item-snippet post__body"
+          dir="auto"
         >
           <div
             className=" post--edited"
@@ -356,6 +357,7 @@ exports[`components/SearchResultsItem should match snapshot for archived channel
         </div>
         <div
           className="search-item-snippet post__body"
+          dir="auto"
         >
           <div
             className=" post--edited"
@@ -563,6 +565,7 @@ exports[`components/SearchResultsItem should match snapshot for channel 1`] = `
         </div>
         <div
           className="search-item-snippet post__body"
+          dir="auto"
         >
           <div
             className=" post--edited"
@@ -726,6 +729,7 @@ exports[`components/SearchResultsItem should match snapshot for deleted message 
         </div>
         <div
           className="search-item-snippet post__body"
+          dir="auto"
         >
           <div
             className=" post--edited"
@@ -868,6 +872,7 @@ exports[`components/SearchResultsItem should match snapshot for deleted message 
         </div>
         <div
           className="search-item-snippet post__body"
+          dir="auto"
         >
           <div
             className=" post--edited"

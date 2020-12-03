@@ -164,6 +164,7 @@ export default class AutosizeTextarea extends React.PureComponent<Props> {
                     onInput={onInput}
                     value={value}
                     defaultValue={defaultValue}
+                    dir='auto'
                 />
                 <div style={style.container}>
                     <textarea
@@ -182,7 +183,7 @@ export default class AutosizeTextarea extends React.PureComponent<Props> {
     }
 }
 
-const style: { [Key: string]: CSSProperties} = {
+const style: { [Key: string]: CSSProperties } = {
     container: {height: 0, overflow: 'hidden'},
     reference: {height: 'auto', width: '100%'},
     placeholder: {overflow: 'hidden', textOverflow: 'ellipsis', opacity: 0.5, pointerEvents: 'none', position: 'absolute', whiteSpace: 'nowrap', background: 'none', borderColor: 'transparent'},

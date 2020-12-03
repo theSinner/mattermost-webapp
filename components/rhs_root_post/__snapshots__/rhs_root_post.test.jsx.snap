@@ -124,6 +124,7 @@ exports[`components/RhsRootPost should match snapshot 1`] = `
       </div>
       <div
         className="post__body"
+        dir="auto"
       >
         <div
           className=" post--edited"
@@ -260,6 +261,7 @@ exports[`components/RhsRootPost should match snapshot on deleted post 1`] = `
       </div>
       <div
         className="post__body"
+        dir="auto"
       >
         <div
           className=" post--edited"
@@ -399,6 +401,7 @@ exports[`components/RhsRootPost should match snapshot on flagged, deleted post 1
       </div>
       <div
         className="post__body"
+        dir="auto"
       >
         <div
           className=" post--edited"
@@ -585,6 +588,7 @@ exports[`components/RhsRootPost should match snapshot when flagged 1`] = `
       </div>
       <div
         className="post__body"
+        dir="auto"
       >
         <div
           className=" post--edited"

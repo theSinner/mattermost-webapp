@@ -133,7 +133,7 @@ class RhsRootPost extends React.PureComponent {
         const {shortcutReactToLastPostEmittedFrom, isLastPost} = this.props;
 
         const shortcutReactToLastPostEmittedFromRHS = prevProps.shortcutReactToLastPostEmittedFrom !== shortcutReactToLastPostEmittedFrom &&
-        shortcutReactToLastPostEmittedFrom === Locations.RHS_ROOT;
+            shortcutReactToLastPostEmittedFrom === Locations.RHS_ROOT;
         if (shortcutReactToLastPostEmittedFromRHS) {
             this.handleShortcutReactToLastPost(isLastPost);
         }
@@ -427,7 +427,10 @@ class RhsRootPost extends React.PureComponent {
                             </div>
                             {dotMenuContainer}
                         </div>
-                        <div className='post__body'>
+                        <div
+                            className='post__body'
+                            dir='auto'
+                        >
                             <div className={postClass}>
                                 <MessageWithAdditionalContent
                                     post={post}

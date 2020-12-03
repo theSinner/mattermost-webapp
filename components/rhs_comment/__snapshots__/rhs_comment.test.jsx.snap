@@ -77,6 +77,7 @@ exports[`components/RhsComment should match snapshot 1`] = `
       </div>
       <div
         className="post__body"
+        dir="auto"
       >
         <div
           className=" post--edited"
@@ -258,6 +259,7 @@ exports[`components/RhsComment should match snapshot hovered 1`] = `
       </div>
       <div
         className="post__body"
+        dir="auto"
       >
         <div
           className=" post--edited"
@@ -405,6 +407,7 @@ exports[`components/RhsComment should match snapshot hovered on deleted post 1`]
       </div>
       <div
         className="post__body"
+        dir="auto"
       >
         <div
           className=" post--edited"
@@ -583,6 +586,7 @@ exports[`components/RhsComment should match snapshot mobile 1`] = `
       </div>
       <div
         className="post__body"
+        dir="auto"
       >
         <div
           className=" post--edited"

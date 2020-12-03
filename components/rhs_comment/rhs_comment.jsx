@@ -128,7 +128,7 @@ class RhsComment extends React.PureComponent {
         }
 
         const shortcutReactToLastPostEmittedFromRHS = prevProps.shortcutReactToLastPostEmittedFrom !== shortcutReactToLastPostEmittedFrom &&
-        shortcutReactToLastPostEmittedFrom === Locations.RHS_ROOT;
+            shortcutReactToLastPostEmittedFrom === Locations.RHS_ROOT;
         if (shortcutReactToLastPostEmittedFromRHS) {
             // Opening the emoji picker when more than one post in rhs is present
             this.handleShortcutReactToLastPost(isLastPost);
@@ -564,7 +564,10 @@ class RhsComment extends React.PureComponent {
                             </div>
                             {options}
                         </div>
-                        <div className='post__body' >
+                        <div
+                            className='post__body'
+                            dir='auto'
+                        >
                             <div className={postClass}>
                                 {failedPostOptions}
                                 <MessageWithAdditionalContent
